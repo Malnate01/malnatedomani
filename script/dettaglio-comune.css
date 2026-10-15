@@ -1,0 +1,214 @@
+/* ==========================================================
+   MALNATE.DOMANI 4 - AMMINISTRAZIONE.CSS (Solo Dettagli)
+   ========================================================== */
+
+/* CONTENITORE STRUTTURALE (Eredita il font e il body da base.css) */
+.schermata-amministrazione {
+    min-height: 100vh;
+    padding: 120px 20px 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* CONTENITORE VERTICALE PER COERENZA SLIDER */
+.blocco-centrale-ritorno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 25px;
+}
+
+/* PULSANTE RITORNO IN POSIZIONE PROTETTA E CENTRATA */
+.pulsante-ritorno {
+    display: inline-block;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 8px 18px;
+    border-radius: 4px;
+    transition: background-color 0.2s, transform 0.2s;
+    align-self: center;
+}
+
+/* Al passaggio del mouse lo sfondo diventa il verde ufficiale delle trasformazioni */
+.pulsante-ritorno:hover {
+    background-color: #28a745;
+    transform: translateY(-1px);
+}
+
+/* Controllo visibilità blocchi argomenti dinamici */
+.blocco-argomento-dinamico {
+    display: none; /* Gestito via JS */
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Header intestazione */
+.mappa-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.mappa-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.mappa-header p {
+    font-size: 18px;
+    color: #eeeeee;
+    line-height: 1.6;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* GRIGLIA GEOMETRICA A TRIANGOLO */
+.grafo-connessioni {
+    display: grid;
+    grid-template-areas: 
+        ". sindaco ."
+        "giunta . consiglio"
+        ". commissioni .";
+    grid-gap: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+/* I NODI (Stile coerente con gli specchietti originali) */
+.nodo-politico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 22px;
+    min-width: 220px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+}
+
+.nodo-politico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+    border-color: #28a745;
+}
+
+.nodo-politico.attivo {
+    border-color: #28a745;
+    background-color: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.25);
+}
+
+.nodo-icona {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.nodo-politico h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.nodo-dettaglio {
+    font-size: 13px;
+    font-weight: 400;
+    color: #cbd5e1;
+}
+
+.nodo-secondario {
+    min-width: 180px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+/* PANNELLO DETTAGLI */
+.pannello-dettagli {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-left: 4px solid #28a745;
+    border-radius: 6px;
+    padding: 30px;
+    min-height: 180px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.scheda-info {
+    display: none;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.scheda-info.attiva {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scheda-info h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(40, 167, 69, 0.4);
+    padding-bottom: 8px;
+}
+
+.focus-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    color: #eeeeee;
+}
+
+.punti-chiave {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.punti-chiave li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.punti-chiave li::before {
+    content: "•";
+    color: #28a745;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    top: -2px;
+}
+
+/* Responsive per schermi piccoli */
+@media (max-width: 680px) {
+    .grafo-connessioni {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .nodo-politico {
+        width: 100%;
+    }
+}

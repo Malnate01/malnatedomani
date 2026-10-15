@@ -1,0 +1,107 @@
+/* ==========================================================
+   MALNATE.DOMANI 3 - TRASFORMAZIONI.CSS (Foto Libere su Sfondo)
+   ========================================================== */
+
+.schermata-galleria {
+    min-height: 100vh;
+    background-color: #666666; /* Il grigio originale di base */
+    padding: 120px 30px 60px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testo-introduzione {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+.testo-introduzione h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.testo-introduzione p {
+    font-size: 18px;
+    color: #eeeeee;
+    line-height: 1.6;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ALLINEAMENTO CENTRATO SULLO SCHERMO */
+.contenitore-immagini-libere {
+    display: flex;
+    flex-wrap: wrap;         /* Permette la disposizione su più righe se manca spazio */
+    justify-content: center; /* Centra il gruppo orizzontalmente */
+    /*align-items: flex-start; /* Allinea la parte alta delle immagini */
+    align-items: flex-end;     /* Allinea la parte bassa delle immagini */
+    gap: 40px;               /* Ampio spazio tra una foto e l'altra */
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* BLOCCO SINGOLO SENZA BORDI O SFONDI CORNICE */
+.elemento-galleria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: auto;             /* La larghezza si adatta all'immagine */
+    transition: transform 0.3s ease;
+}
+
+.elemento-galleria:hover {
+    transform: translateY(-8px); /* Delicato sollevamento quando ci si passa sopra */
+}
+
+/* REGOLA PROPORZIONALE: Immagini strette DIRETTAMENTE SULLO SFONDO */
+.foto-stretta {
+    display: block;
+    Max-width: 160px;           /* Larghezza uniforme per tutte le miniature */
+    height: auto;             /* Calcola l'altezza esatta in percentuale */
+    border-radius: 4px;      /* Un lievissimo arrotondamento agli angoli della foto stessa */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.55); /* Ombra per staccare lo scatto dal grigio */
+}
+
+/* REGOLA PROPORZIONALE: Immagini larghe DIRETTAMENTE SULLO SFONDO */
+.foto-fluida {
+    display: block;
+    max-height: 220px;           /* Altezza uniforme per tutte le miniature */
+    width: auto;             /* Calcola la larghezza esatta in percentuale */
+    border-radius: 4px;      /* Un lievissimo arrotondamento agli angoli della foto stessa */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.55); /* Ombra per staccare lo scatto dal grigio */
+}
+
+/* DIDASCALIA LIBERA E LEGGERA */
+.testo-ubicazione {
+    margin-top: 15px;        /* Distanza sotto la foto */
+    font-size: 14px;
+    font-weight: 500;        /* Elegante, non forte */
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5); /* Ombra morbida per renderlo leggibile sul grigio */
+}
+
+/* Ottimizzazione Dispositivi Mobili */
+@media (max-width: 768px) {
+    .contenitore-immagini-libere {
+        gap: 25px;
+    }
+ 
+    .foto-fluida {
+        height: 220px;       /* Riduce la scala complessiva sui telefoni */
+    }
+ 
+    .foto-stretta {
+        height: 280px;       /* Riduce la scala complessiva sui telefoni */
+    } 
+
+    .testo-ubicazione {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,225 @@
+/* ==========================================================
+   MALNATE.DOMANI 3 - BASE.CSS (Stili Globali e Navigazione)
+   ========================================================== */
+
+/* Reset globale di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #666666; /* Il grigio medio-scuro originale */
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* BARRA DI NAVIGAZIONE FISSA */
+.barra-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff; /* La barra originale è bianca */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Leggera ombra sotto la barra bianca */
+}
+
+/* Logo Originale */
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333333; /* Scrittura scura */
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #28a745; /* Il verde brillante originale di Malnate.domani */
+}
+
+/* Gruppo Pulsanti */
+.gruppo-pulsanti {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+}
+
+.link-menu {
+    color: #555555; /* Testo scuro sulla barra bianca */
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    padding: 8px 0;
+    display: inline-block;
+}
+
+.link-menu:hover, .link-menu.attivo {
+    color: #28a745; /* Diventa verde al passaggio o se attivo */
+}
+
+.link-menu.attivo {
+    border-bottom: 2px solid #28a745; /* Linea verde sotto il pulsante attivo */
+}
+
+/* Menu a tendina (Struttura per Idee di Trasformazione) */
+.voce-tendina {
+    position: relative;
+}
+
+.contenuto-tendina {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    list-style: none;
+    border-radius: 4px;
+    padding: 10px 0;
+    border: 1px solid #eeeeee;
+}
+
+.voce-tendina:hover .contenuto-tendina {
+    display: block;
+}
+
+.contenuto-tendina li a {
+    color: #333333;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.contenuto-tendina li a:hover {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+/* STRUTTURA GENERICA DELLE SCHERMATE (FULL SCREEN) */
+.schermata {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 40px 20px;
+}
+
+/* ==========================================================
+   OTTIMIZZAZIONE RESPONSIVE CON HAMBURGER MENU (SOGLIA 950px)
+   Sostituisce interamente la vecchia regola mobile in fondo a base.css
+   ========================================================== */
+
+/* Di base, nascondiamo il pulsante hamburger sui grandi schermi desktop */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    padding: 0;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333333; /* Linee scure sulla barra bianca */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Questa regola scatta non appena lo schermo scende sotto i 550px di larghezza */
+@media (max-width: 550px) {
+    
+    /* 1. Modifiche strutturali alla barra e al logo ereditate dal tuo stile */
+    .barra-menu {
+        padding: 0 20px;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        margin: 0; /* Mantiene il logo perfettamente allineato a sinistra dell'hamburger */
+    }
+
+    /* 2. Mostriamo l'icona Hamburger a tre linee */
+    .hamburger {
+        display: flex;
+    }
+
+    /* 3. Trasformiamo l'elenco pulsanti in un cassetto verticale nascosto a sinistra */
+    .gruppo-pulsanti {
+        position: fixed;
+        top: 70px; /* Parte subito sotto la fascia bianca di 70px */
+        left: -100%; /* Completamente nascosto a sinistra dello schermo */
+        width: 200px; /* Larghezza del cassetto */
+        height: calc(100vh - 70px); /* Copre tutta l'altezza dello schermo rimanente */
+        background-color: #ffffff; /* Sfondo bianco stabile */
+        flex-direction: column;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        gap: 0 !important;
+        padding: 20px 0;
+        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+        transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Scivolamento vellutato */
+        z-index: 999;
+    }
+
+    /* Impaginazione dei link verticali dentro il cassetto */
+    .gruppo-pulsanti li {
+        width: 100%;
+        margin-left: 0 !important;
+    }
+
+    .link-menu {
+        width: 100%;
+        padding: 15px 25px !important;
+        border-bottom: 1px solid #eeeeee;
+        font-size: 14px !important;
+        display: block;
+    }
+
+    .link-menu.attivo {
+        border-bottom: 1px solid #eeeeee !important;
+        border-left: 4px solid #28a745; /* Linea verticale verde Malnate sul pulsante attivo */
+        color: #28a745 !important;
+        background-color: rgba(40, 167, 69, 0.05); /* Sottile fondo verde in trasparenza */
+    }
+
+    /* 4. CLASSE DI ATTIVAZIONE (Quando il menu è aperto scivola a schermo) */
+    .gruppo-pulsanti.menu-aperto {
+        left: 0; /* Il cassetto si sposta a filo dello schermo */
+    }
+
+    /* ANIMAZIONE MECCANICA: Trasforma le tre linee in una "X" quando il menu è aperto */
+    .hamburger.attivo span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.attivo span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.attivo span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+

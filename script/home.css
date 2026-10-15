@@ -1,0 +1,40 @@
+/* ==========================================================
+   MALNATE.DOMANI 3 - HOME.CSS (Specifico per la Home Page)
+   ========================================================== */
+
+/* Colore di sfondo originale (Sfumatura uniforme grigio/antracite) */
+#pagina-benvenuto.schermata {
+    background-color: #6d6e71; /* Tonalità esatta di grigio fumo dell'originale */
+}
+
+/* Testi ed Elementi Grafici con ombreggiatura elegante */
+#pagina-benvenuto h1 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+    max-width: 900px;
+    /* Ombreggiatura netta ed elegante che crea l'effetto rilievo */
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.61);
+}
+
+#pagina-benvenuto p {
+    font-size: 19px;
+    color: #e6e6e6;
+    max-width: 750px;
+    line-height: 1.6;
+    font-weight: 400;
+    /* Ombra più morbida per il sottotitolo leggibile */
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Ottimizzazione Mobile per la Home */
+@media (max-width: 768px) {
+    #pagina-benvenuto h1 {
+        font-size: 34px;
+    }
+    #pagina-benvenuto p {
+        font-size: 16px;
+    }
+}

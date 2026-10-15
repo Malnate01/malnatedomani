@@ -1,0 +1,90 @@
+/* ==========================================================
+   MALNATE.DOMANI 5 - MALNATE.CSS (Sezione Territorio)
+   ========================================================== */
+
+/* Spaziatura specifica per non finire sotto la barra fissa di 70px */
+.malnate-schermata {
+    padding-top: 120px;
+    justify-content: flex-start;
+}
+
+.malnate-header {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.malnate-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.malnate-header p {
+    font-size: 18px;
+    color: #eeeeee;
+    line-height: 1.6;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Griglia Fluida per le Macro-Aree */
+.malnate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Box Singolo RIGOROSAMENTE QUADRATO con stile originale "Conosci il Comune" */
+.grid-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2); /* Sottile trasparenza scura ed elegante */
+    border: 1px solid rgba(255, 255, 255, 0.12); /* Micro-cornice chiara originale */
+    border-radius: 8px;
+    padding: 25px 20px;
+    text-decoration: none;
+    color: #ffffff; /* Testo bianco */
+    aspect-ratio: 1 / 1; /* Forza il box a rimanere quadrato */
+    
+    /* Ombreggiatura profonda per l'effetto rilievo sul grigio */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Effetto Hover Sobrio (Floating di 5px e Micro-Cornice Verde Malnate) */
+.grid-box:hover {
+    transform: translateY(-5px);
+    border-color: #28a745; /* Evidenziazione verde Malnate originale */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45); /* L'ombra si espande */
+}
+
+/* Elementi Interni al Box */
+.box-icon {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.box-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    border-bottom: 2px solid rgba(40, 167, 69, 0.4); /* Sottile linea verde decorativa */
+    padding-bottom: 8px;
+    width: 80%; /* Contiene la linea decorativa al centro */
+    text-align: center;
+}
+
+.box-desc {
+    font-size: 14px;
+    font-weight: 400;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
