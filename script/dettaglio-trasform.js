@@ -26,7 +26,7 @@ const archivioTrasformazioni = [
         id: 4, 
         ubicazione: "Via Volta - Centro Storico", 
         presente: "Ora cen sto via Volta.jpg", 
-        futuro: ["Dopo cen sto via Volta.jpg"] 
+        futuro: ["Dopo cen sto via Volta.jpg"]  
     },
 
     { 
