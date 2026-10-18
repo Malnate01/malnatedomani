@@ -152,7 +152,9 @@
 .overlay-finestra {
     width: 100%;
     min-height: 100vh;
-    background-color: #1e1e1e;
+    /*background-color: #1e1e1e;*/
+    /*background-color: #666666 !important;*/
+    background-color: rgba(102, 102, 102, 0.95) !important; /* leggera trasparenza*/
     padding: 40px 20px;
     box-sizing: border-box;
 
@@ -266,6 +268,17 @@
     color: #ffffff;
     border-bottom-color: #ffffff;
 }
+
+/* REGOLA UNIVERSALE PER TUTTI GLI IFRAME DI DETTAGLIO */
+
+.overlay iframe {
+    background-color: #444444 !important; /* Il grigio compatto più scuro che desideri */
+    /*background-color: rgba(0,0,0,0.4)*/
+    color: #ffffff !important;            /* Forza il testo di tutti i documenti a essere bianco */
+}
+
+
+
 
 /* OTTIMIZZAZIONE RESPONSIVE PER SCHERMI MEDI E SMARTPHONE */
 @media (max-width: 1050px) {

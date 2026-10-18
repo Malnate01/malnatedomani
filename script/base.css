@@ -223,3 +223,34 @@ body {
     }
 }
 
+/* ==========================================================
+   STILI PER LE FINESTRE DI DETTAGLIO (OVERLAY E IFRAME)
+   ========================================================== */
+
+/* 1. Sfondo globale e contorno dell'Overlay (Linea Guida 4) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #666666 !important; /* Trasforma tutto il contorno nero nel grigio del sito */
+    z-index: 9999;
+}
+
+/* 2. Stile universale per l'interno di TUTTI i documenti HTML caricati nei box */
+.corpo-documento-iframe {
+    background-color: rgba(0,0,0,0.65) !important;  /* Il grigio compatto più scuro per il box di lettura */
+    color: #ffffff !important;            /* Forza il testo a essere sempre bianco */
+    margin: 0;
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mantiene lo stesso font del sito */
+}
+
+/* 3. Link ai PDF esterni stabilmente verdi (Linea Guida 5) */
+.corpo-documento-iframe .link-pdf-esterno {
+    color: #28a745 !important;
+    text-decoration: underline;
+}
+
+
