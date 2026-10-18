@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettaglio Territorio - Malnate.domani</title>
+    <link rel="stylesheet" href="script/base.css">
+    <link rel="stylesheet" href="script/dettaglio-malnate.css">
+</head>
+<body>
+
+    <!-- BARRA DI NAVIGAZIONE FISSA GLOBALE -->
+    <nav class="barra-menu">
+        <div class="logo">Malnate<span>.domani</span></div>
+        <button class="hamburger" id="hamburger-trigger"><span></span><span></span><span></span></button>
+        <ul class="gruppo-pulsanti" id="menu-principale">
+            <li><a href="index.html" class="link-menu">Benvenuto</a></li>
+            <li><a href="conosci-malnate.html" class="link-menu attivo">Conosci Malnate</a></li>
+            <li><a href="conosci-comune.html" class="link-menu">Conosci il Comune</a></li>
+            <li><a href="trasformazioni.html" class="link-menu">Idee di Trasformazione</a></li> 
+            <li><a href="territorio.html" class="link-menu">Governare il Territorio</a></li>
+            <li><a href="criticita.html" class="link-menu">Criticità</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENITORE STRUTTURALE PRINCIPALE -->
+    <main class="schermata-amministrazione">
+        <div class="blocco-centrale-ritorno">
+            <a href="conosci-malnate.html" class="pulsante-ritorno">← Torna a Conosci Malnate</a>
+        </div>
+
+
+	<!-- ==========================================================
+             SEZIONE 1: STORIA E ARCHEOLOGIA
+             ========================================================== -->
+        <section id="sezione-storia" class="blocco-argomento-dinamico">
+            <header class="mappa-header">
+                <h1>Storia e Archeologia</h1>
+                <p>Un viaggio nel tempo alla scoperta delle radici di Malnate.</p>
+            </header>
+            
+            <div class="grafo-connessioni">
+                <!-- BOX 1 -->
+                <div class="nodo-politico" data-target="contenuto-romano">
+                    <div class="nodo-icona">🏛️</div><h3>Passato Romano</h3><div class="nodo-dettaglio">I reperti storici</div>
+                </div>
+                <!-- OVERLAY BOX 1 -->
+                <div id="contenuto-romano" class="sovrapposizione-overlay"><div class="overlay-finestra"><div class="overlay-corpo"><div class="overlay-barra-superiore"><h2>Il Passato Romano</h2><button class="pulsante-chiudi-overlay">&times;</button></div><div class="box-media"><p class="focus-text">I reperti archeologici rinvenuti testimoniano l'importanza strategica di Malnate.</p></div></div></div></div>
+
+                <!-- BOX 2 -->
+                <div class="nodo-politico" data-target="contenuto-monumenti">
+                    <div class="nodo-icona">🏰</div><h3>Monumenti e Ville</h3><div class="nodo-dettaglio">Le dimore storiche</div>
+                </div>
+                <!-- OVERLAY BOX 2 -->
+                <div id="contenuto-monumenti" class="sovrapposizione-overlay"><div class="overlay-finestra"><div class="overlay-corpo"><div class="overlay-barra-superiore"><h2>Monumenti e Ville Storiche</h2><button class="pulsante-chiudi-overlay">&times;</button></div><div class="box-media"><p class="focus-text">Dalle storiche corti industriali alle splendide ville signorili.</p></div></div></div></div>
+            </div>
+        </section>
+
+
+
+        <!-- ==========================================================
+             SEZIONE 2: NATURA E SENTIERI
+             ========================================================== -->
+        <section id="sezione-natura" class="blocco-argomento-dinamico">
+            <header class="mappa-header">
+                <h1>Natura e Sentieri</h1>
+                <p>Esplora le meraviglie naturalistiche e i percorsi verdi del territorio malnatese.</p>
+            </header>
+            
+            <div class="grafo-connessioni">
+                <!-- BOX 1 -->
+                <div class="nodo-politico" data-target="contenuto-mappa">
+                    <div class="nodo-icona">📍</div><h3>Luoghi di Interesse</h3><div class="nodo-dettaglio">Mappa del territorio</div>
+                </div>
+                <!-- OVERLAY BOX 1 (Abbinato subito sotto) -->
+                <div id="contenuto-mappa" class="sovrapposizione-overlay"><div class="overlay-finestra"><div class="overlay-corpo"><div class="overlay-barra-superiore"><h2>Mappa dei Luoghi di Interesse</h2><button class="pulsante-chiudi-overlay">&times;</button></div><div class="box-media"><img src="immagini/mappa-territorio.jpg" alt="Mappa"><p class="focus-text">La cartografia completa del verde malnatese.</p></div></div></div></div>
+
+                <!-- BOX 2 -->
+                <div class="nodo-politico" data-target="contenuto-ciclabile">
+                    <div class="nodo-icona">🚴</div><h3>Ciclabile Olona</h3>
+			<div class="nodo-dettaglio">Castiglione O. - Mulino del Trotto</div>
+                </div>
+                <!-- OVERLAY BOX 2 -->
+                <div id="contenuto-ciclabile" class="sovrapposizione-overlay"><div class="overlay-finestra"><div class="overlay-corpo"><div class="overlay-barra-superiore"><h2>Ciclabile Castiglione Olona - Mulino del Trotto</h2><button class="pulsante-chiudi-overlay">&times;</button></div><div class="box-media"><iframe src="immagini/ciclopedonale olona.pdf#view=FitH"></iframe><p class="focus-text" style="text-align:center;"><a href="immagini/ciclopedonale olona.pdf" target="_blank" class="link-pdf-esterno">Apri o scarica il PDF completo</a></p></div></div></div></div>
+
+                <!-- BOX 3 -->
+                <div class="nodo-politico" data-target="contenuto-cave">
+                    <div class="nodo-icona">⛏️</div><h3>Cave di Molera</h3><div class="nodo-dettaglio">Archeologia industriale</div>
+                </div>
+                <!-- OVERLAY BOX 3 -->
+                <div id="contenuto-cave" class="sovrapposizione-overlay"><div class="overlay-finestra"><div class="overlay-corpo"><div class="overlay-barra-superiore"><h2>Le Cave di Molera</h2><button class="pulsante-chiudi-overlay">&times;</button></div>
+<div class="box-media">
+<video controls width="100%">
+<source src="immagini/CAVE MOLERA.mp4" type="video/mp4"></video><p class="focus-text">Testimonianza dell'antica estrazione mineraria.</p></div></div></div></div>
+
+                <!-- BOX 4 -->
+                <div class="nodo-politico" data-target="contenuto-lanza">
+                    <div class="nodo-icona">🌳</div><h3>Parco del Lanza</h3><div class="nodo-dettaglio">I sentieri protetti</div>
+                </div>
+                <!-- OVERLAY BOX 4 -->
+                <div id="contenuto-lanza" class="sovrapposizione-overlay"><div class="overlay-finestra"><div class="overlay-corpo"><div class="overlay-barra-superiore"><h2>I Sentieri del Parco del Lanza</h2><button class="pulsante-chiudi-overlay">&times;</button></div><div class="box-media"><video controls width="100%"><source src="immagini/TRASFORMAZIONE_LANZA.mp4" type="video/mp4"></video><p class="focus-text">Itinerari nel polmone verde dell'Insubria.</p></div></div></div></div>
+            </div>
+        </section>
+
+        
+
+        <!-- ==========================================================
+             SEZIONE 3: SAPORI E CULTURA
+             ========================================================== -->
+        <section id="sezione-sapori" class="blocco-argomento-dinamico">
+            <header class="mappa-header">
+                <h1>Sapori e Cultura</h1>
+                <p>Vivi le tradizioni enogastronomiche e l'identità culturale locale.</p>
+            </header>
+            
+            <div class="grafo-connessioni">
+                <!-- BOX 1 -->
+                <div class="nodo-politico" data-target="contenuto-tradizioni">
+                    <div class="nodo-icona">🍷</div><h3>Prodotti Tipici</h3><div class="nodo-dettaglio">I sapori della terra</div>
+                </div>
+                <!-- OVERLAY BOX 1 -->
+                <div id="contenuto-tradizioni" class="sovrapposizione-overlay"><div class="overlay-finestra"><div class="overlay-corpo"><div class="overlay-barra-superiore"><h2>I Prodotti Tipici della Nostra Terra</h2><button class="pulsante-chiudi-overlay">&times;</button></div><div class="box-media"><p class="focus-text">La riscoperta delle ricette contadine e dei prodotti locali.</p></div></div></div></div>
+
+                <!-- BOX 2 -->
+                <div class="nodo-politico" data-target="contenuto-eventi">
+                    <div class="nodo-icona">🎨</div><h3>Feste e Cultura</h3><div class="nodo-dettaglio">Eventi del territorio</div>
+                </div>
+                <!-- OVERLAY BOX 2 -->
+                <div id="contenuto-eventi" class="sovrapposizione-overlay"><div class="overlay-finestra"><div class="overlay-corpo"><div class="overlay-barra-superiore"><h2>Feste, Arte e Cultura</h2><button class="pulsante-chiudi-overlay">&times;</button></div><div class="box-media"><p class="focus-text">Gli eventi annuali che mantengono vive le tradizioni.</p></div></div></div></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script/base.js"></script>
+    <script src="script/dettaglio-malnate.js"></script>
+</body>
+</html>

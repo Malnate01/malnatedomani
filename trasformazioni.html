@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malnate.domani - Idee di Trasformazione</title>
+    <link rel="stylesheet" href="script/base.css?v=2">
+    <link rel="stylesheet" href="script/trasformazioni.css?v=2">
+</head>
+<body>
+
+    
+    <!-- BARRA DI NAVIGAZIONE ORIZZONTALE FISSA CON HAMBURGER -->
+    <div class="barra-menu">
+        <div class="logo">Malnate<span>.domani</span></div>
+        
+        <!-- NUOVO: Pulsante Hamburger visibile solo su schermi stretti -->
+        <button class="hamburger" id="hamburger-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="gruppo-pulsanti" id="menu-principale">
+            <li><a href="index.html" class="link-menu">Benvenuto</a></li>
+            <li><a href="conosci-malnate.html" class="link-menu">Conosci Malnate</a></li>
+            <li><a href="conosci-comune.html" class="link-menu">Conosci il Comune</a></li>
+           <li><a href="trasformazioni.html" class="link-menu attivo">Idee di Trasformazione</a></li> 
+            <li><a href="territorio.html" class="link-menu">Governare il Territorio</a></li>
+            <li><a href="criticita.html" class="link-menu">Criticità</a></li>
+        </ul>
+    </div>
+
+    <!-- CONTENUTO PRINCIPALE -->
+    <div class="schermata-galleria">
+        
+        <div class="testo-introduzione">
+            <h1>Idee di Trasformazione</h1>
+            <p>Esplora la nostra città attraverso sguardi nuovi. Questa galleria raccoglie istantanee del presente per ripensare spazi pubblici e privati: un invito a immaginare insieme una Malnate più accogliente, inclusiva e attenta alla dignità di chi la vive ogni giorno, di chi ci lavora e di chi la visita.</p>
+        </div>
+
+        <!-- CONTENITORE FLESSIBILE SENZA SCATOLE -->
+        <div class="contenitore-immagini-libere">
+            
+            <!-- FOTO 1 -->
+            <!-- <a href="dettaglio-trasform.html?id=1" class="elemento-galleria"> -->
+            <a href="dettaglio-trasform.html?id=1" class="elemento-galleria">
+                <img src="immagini/Ora via Binaghi.jpg" alt="Via Binaghi - Centro" class="foto-stretta">
+                <div class="testo-ubicazione">Via Binaghi - Centro</div>
+            </a>
+
+            <!-- FOTO 2 -->
+            <a href="dettaglio-trasform.html?id=2" class="elemento-galleria">
+                <img src="immagini/Ora via Somalia fronte.jpg" alt="Via Somalia - Centro" class="foto-fluida">
+                <div class="testo-ubicazione">Via Somalia - Centro</div>
+            </a>
+	
+		<!-- FOTO 3-->
+            <a href="dettaglio-trasform.html?id=3" class="elemento-galleria">
+                <img src="immagini/Ora via Somalia retro.jpg" alt="Via Somalia (retro) - Centro" class="foto-fluida">
+                <div class="testo-ubicazione">Via Somalia (retro) - Centro</div>
+            </a>	
+
+		<!-- FOTO 4 -->
+		<a href="dettaglio-trasform.html?id=4" class="elemento-galleria">
+                <img src="immagini/Ora cen sto via Volta.jpg" alt="Via Volta - Centro storico" class="foto-stretta">
+                <div class="testo-ubicazione">Via Volta - Centro Storico</div>
+            </a> 
+
+		<!-- FOTO 5 -->
+		<a href="dettaglio-trasform.html?id=5" class="elemento-galleria">
+                <img src="immagini/Ora cen sto via Gramsci.jpg" alt="Via Gramsci - Centro storico" class="foto-fluida">
+                <div class="testo-ubicazione">Via Gramsci- Centro Storico</div>
+            </a> 
+
+		<!-- FOTO 6 -->
+		<a href="dettaglio-trasform.html?id=6" class="elemento-galleria">
+                <img src="immagini/Ora cen sto pza Cavour.jpg" alt="P.za Cavour- Centro storico" class="foto-fluida">
+                <div class="testo-ubicazione">P.za Cavour - Centro Storico</div>
+            </a> 
+
+            <!-- FOTO 7 -->
+            <a href="dettaglio-trasform.html?id=7" class="elemento-galleria">
+                <img src="immagini/Ora sos pro civ.jpg" alt="SOS e Protezione Civile - Centro" class="foto-fluida">
+                <div class="testo-ubicazione">SOS e Protezione Civile - Centro</div>
+            </a>
+
+		<!-- FOTO 8 -->
+            <a href="dettaglio-trasform.html?id=8" class="elemento-galleria">
+                <img src="immagini/Ora exSiome panoramica.jpg" alt="exSiome loc. Folla di Malnate" class="foto-fluida">
+                <div class="testo-ubicazione">exSiome loc. Folla di Malnate</div>
+            </a>
+
+        </div>
+    </div>
+
+<!-- PRIMA carichiamo la logica globale del menu Hamburger -->
+    <script src="script/base.js"></script>
+
+</body>
+</html>

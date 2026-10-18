@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malnate.domani - Conosci il Comune</title>
+    <!-- Carica la base globale e il nuovo foglio di stile per questa sezione -->
+    <link rel="stylesheet" href="script/base.css?v=2">
+    <link rel="stylesheet" href="script/comune.css?v=2">
+</head>
+<body>
+
+<!-- BARRA DI NAVIGAZIONE ORIZZONTALE FISSA CON HAMBURGER -->
+    <div class="barra-menu">
+        <div class="logo">Malnate<span>.domani</span></div>
+        
+        <!-- NUOVO: Pulsante Hamburger visibile solo su schermi stretti -->
+        <button class="hamburger" id="hamburger-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="gruppo-pulsanti" id="menu-principale">
+            <li><a href="index.html" class="link-menu">Benvenuto</a></li>
+            <li><a href="conosci-malnate.html" class="link-menu">Conosci Malnate</a></li>
+            <li><a href="conosci-comune.html" class="link-menu attivo">Conosci il Comune</a></li>
+            <li><a href="trasformazioni.html" class="link-menu">Idee di Trasformazione</a></li> 
+            <li><a href="territorio.html" class="link-menu">Governare il Territorio</a></li>
+            <li><a href="criticita.html" class="link-menu">Criticità</a></li>
+        </ul>
+    </div>
+
+    <!-- CONTENUTO PRINCIPALE -->
+    <div class="schermata-conosci">
+        
+        <!-- INTRODUZIONE SCRITTA -->
+        <div class="testo-introduzione">
+            <h1>Conosci il Comune</h1>
+            <p>Un piccolo dizionario civico per orientarsi all'interno della macchina amministrativa di Malnate. Comprendere chi decide, quali sono le regole e come funzionano i servizi è il primo passo per trasformare la partecipazione in una proposta concreta.</p>
+        </div>
+
+        <!-- GRIGLIA FLUIDA PER GLI SPECCHIETTI IN RILIEVO -->
+        <div class="contenitore-griglia-civica" id="griglia-argomenti">
+            <!-- Gli specchietti verranno generati automaticamente qui da conosci.js -->
+        </div>
+    </div>
+
+<!-- PRIMA carichiamo la logica globale del menu Hamburger -->
+    <script src="script/base.js"></script>
+
+    <!-- Script del motore logico della pagina -->
+    <script src="script/comune.js?v=2"></script>
+</body>
+</html>
