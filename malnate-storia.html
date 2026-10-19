@@ -6,8 +6,8 @@
     <title>Storia di Malnate - Parte 1</title>
     <!-- Collegamento al file di stile centralizzato del progetto -->
     <link rel="stylesheet" href="../script/stile-documenti.css">
-    <style>
-        /* Stile di formattazione per garantire l'allineamento e l'indentazione responsive */
+        <style>
+        /* Struttura base della lista */
         .lista-storia {
             list-style: none;
             padding: 0;
@@ -15,33 +15,33 @@
         }
         .lista-storia li {
             display: flex;
-            align-items: flex-start;
+            align-items: flex-start; /* Mantiene l'allineamento agganciato in alto */
             gap: 12px;
             margin-bottom: 18px;
         }
+        /* Contenitore dell'emoji o dell'immagine */
         .lista-storia .elemento-visivo {
-    flex-shrink: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    font-size: 1.2rem;
-    /* Rimuovi margin-top precedente e usa questo per allineare alla prima riga */
-    margin-top: 4px; 
-}
-
-/* Forza tutte le immagini segnaposto ad allinearsi come gli emoji */
-.lista-storia .elemento-visivo img {
-    width: 24px;
-    height: auto;
-    vertical-align: middle;
-}
-
+            flex-shrink: 0;
+            display: inline-flex;
+            justify-content: center;
+            width: 24px;
+            font-size: 1.2rem;
+            /* Spinge leggermente in basso sia l'emoji che l'immagine per l'effetto desiderato */
+            margin-top: 6px; 
+        }
+        /* NUOVA REGOLA: Si applica automaticamente a tutte le immagini dentro .elemento-visivo */
+        .lista-storia .elemento-visivo img {
+            width: 24px;
+            height: auto;
+            /* Abbassa ulteriormente l'immagine per simulare il comportamento dell'emoji */
+            transform: translateY(2px); 
+        }
         .testo-paragrafo {
             margin: 0;
             flex: 1;
         }
     </style>
+
 </head>
 <body style="font-size: 15px; background-color: rgba(0,0,0,0.65) !important; color: #ffffff !important; margin: 0; padding: 15px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6;">
 
