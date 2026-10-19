@@ -4,14 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storia di Malnate - Parte 1</title>
+    <!-- Collegamento al file di stile centralizzato del progetto -->
     <link rel="stylesheet" href="../script/stile-documenti.css">
+    <style>
+        /* Stile di formattazione per garantire l'allineamento e l'indentazione responsive */
+        .lista-storia {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .lista-storia li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+        .lista-storia .elemento-visivo {
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+        .lista-storia img {
+            width: 24px;
+            height: auto;
+        }
+        .testo-paragrafo {
+            margin: 0;
+            flex: 1;
+        }
+    </style>
 </head>
 <body style="font-size: 15px; background-color: rgba(0,0,0,0.65) !important; color: #ffffff !important; margin: 0; padding: 15px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6;">
 
-    <!-- Titolo Principale -->
+    <!-- Titolo Principale (Dimensioni corrette per overlay) -->
     <h1 class="western" style="font-size: 22px; border-bottom: 2px solid #28a745; padding-bottom: 10px; margin-bottom: 20px; color: #ffffff;">
         STORIA di MALNATE<br>
-        <span style="font-size: 17px; font-weight: normal; display: block; margin-top: 5px; color: #cccccc;">
+        <span style="font-size: 14px; font-weight: normal; display: block; margin-top: 5px; color: #cccccc;">
             Profilo Storico e Geologico della Citta di Malnate
         </span>
     </h1>
@@ -21,56 +53,60 @@
     </p>
 
     <!-- Macro-sezione 1 -->
-    <h2 class="western" style="font-size: 1.5rem; color: #ffffff; margin-top: 25px; margin-bottom: 15px;">
+    <h2 class="western" style="font-size: 17px; color: #ffffff; margin-top: 25px; margin-bottom: 15px;">
         Inquadramento Geografico e Origini Geologiche
     </h2>
     <p class="western" style="margin-bottom: 15px;">
         Il territorio sorge nella porzione collinare di Varese, caratterizzato da terrazzi alluvionali posti sulle sponde sinistre del torrente Lanza e del fiume Olona.
     </p>
     
-    <p class="western" style="margin-bottom: 15px;">
-        🐚 <strong>L'antico fiordo marino:</strong> Prima dell'epoca quaternaria, l'altopiano si affacciava su un profondo fiordo sottomarino generato da canyon fluviali. Di questa era rimane un fossile unico ed esclusivo del territorio: la conchiglia Emiliomya malnatensis.
-    </p>
+    <ul class="lista-storia">
+        <li>
+            <span class="elemento-visivo">🐚</span>
+            <p class="testo-paragrafo"><strong>L'antico fiordo marino:</strong> Prima dell'epoca quaternaria, l'altopiano si affacciava su un profondo fiordo sottomarino generato da canyon fluviali. Di questa era rimane un fossile unico ed esclusivo del territorio: la conchiglia Emiliomya malnatensis.</p>
+        </li>
+        <li>
+            <span class="elemento-visivo">⚒️</span>
+            <p class="testo-paragrafo"><strong>La pietra molera e la puddinga:</strong> La collina si è formata nel Miocene ed è costituita da puddinga (conglomerato di ciottoli). Nella Valle del Lanza si è depositata una particolare formazione arenacea micacea, formatasi 25 milioni di anni fa e nota come pietra molera, storicamente estratta per l'edilizia e per le macine dei mulini.</p>
+        </li>
+        <li>
+            <span class="elemento-visivo">🦬</span>
+            <p class="testo-paragrafo"><strong>Le glaciazioni e il fossile di bisonte:</strong> Durante le glaciazioni, il clima locale era simile alla tundra polare. Nel 1959, in una cava di sabbia del paese, vennero portate alla luce le ossa fossili di un enorme bisonte antico (alto oltre due metri), probabilmente travolto da una piena preistorica del fiume.</p>
+        </li>
+        <li>
+            <span class="elemento-visivo">🥀</span>
+            <p class="testo-paragrafo"><strong>I terreni a Baraggia:</strong> Alla glaciazione di Mindel risalgono i terreni ricoperti da Löss (terriccio sabbioso-argilloso), scarsamente coltivabili, che hanno dato origine al toponimo locale di baraggie.</p>
+        </li>
+    </ul>
 
-    <p class="western" style="margin-bottom: 15px;">
-        ⚒️ <strong>La pietra molera e la puddinga:</strong> La collina si è formata nel Miocene ed è costituita da puddinga (conglomerato di ciottoli). Nella Valle del Lanza si è depositata una particolare formazione arenacea micacea, formatasi 25 milioni di anni fa e nota come pietra molera, storicamente estratta per l'edilizia e per le macine dei mulini.
-    </p>
-
-    <p class="western" style="margin-bottom: 15px;">
-        🦬 <strong>Le glaciazioni e il fossile di bisonte:</strong> Durante le glaciazioni, il clima locale era simile alla tundra polare. Nel 1959, in una cava di sabbia del paese, vennero portate alla luce le ossa fossili di un enorme bisonte antico (alto oltre due metri), probabilmente travolto da una piena preistorica del fiume.
-    </p>
-
-    <p class="western" style="margin-bottom: 15px;">
-        🥀 <strong>I terreni a Baraggia:</strong> Alla glaciazione di Mindel risalgono i terreni ricoperti da Löss (terriccio sabbioso-argilloso), scarsamente coltivabili, che hanno dato origine al toponimo locale di baraggie.
-    </p>
 
     <!-- Macro-sezione 2 -->
-    <h2 class="western" style="font-size: 1.5rem; color: #ffffff; margin-top: 25px; margin-bottom: 15px;">
+    <h2 class="western" style="font-size: 17px; color: #ffffff; margin-top: 25px; margin-bottom: 15px;">
         Origini del Nome ed Etimologia
     </h2>
     <p class="western" style="margin-bottom: 15px;">
         Il nome della città presenta una duplice interpretazione tra storicità e tradizione orale.
     </p>
 
-    <p class="western" style="margin-bottom: 15px;">
-        👑 <strong>La leggenda longobarda:</strong> La tradizione popolare lega il nome a un'esclamazione della regina Teodolinda, che avrebbe definito malnati (furfanti) gli abitanti, oppure avrebbe descritto come mal-a-nà (malandare) il difficile passaggio del suo corteo stradale coperto di ramaglie.
-    </p>
+    <ul class="lista-storia">
+        <li>
+            <span class="elemento-visivo">👑</span>
+            <p class="testo-paragrafo"><strong>La leggenda longobarda:</strong> La tradizione popolare lega il nome a un'esclamazione della regina Teodolinda, che avrebbe definito malnati (furfanti) gli abitanti, oppure avrebbe descritto come mal-a-nà (malandare) il difficile passaggio del suo corteo stradale coperto di ramaglie.</p>
+        </li>
+        <li>
+            <!-- Qui inserisci l'immagine inserendola nella struttura flessibile per l'indentazione perfetta -->
+            <span class="elemento-visivo"><img src="immagini/roccia.png" alt="Roccia"></span>
+            <p class="testo-paragrafo"><strong>L'ipotesi etimologica celtica:</strong> Scientificamente, il prefisso Malna- deriva con molta probabilità da marna (la roccia argillosa ampiamente presente in zona), mentre il suffisso -ate indica il termine celtico contrada. L'unione definisce il significato di Contrada della Marna.</p>
+        </li>
+        <li>
+            <span class="elemento-visivo">📜</span>
+            <p class="testo-paragrafo"><strong>Le prime attestazioni scritte:</strong> Il toponimo è storicamente documentato a partire dall'XI secolo, comparendo prima come Melnate e, dal 1089, nella forma definitiva di Malnate. Nella mappa vaticana del 1581 appare storpiato in Malindo.</p>
+        </li>
+    </ul>
 
-    <!-- Ritaglio Immagine 1 (Roccia Grigia / Marna) -->
-    <div style="margin: 15px 0; text-align: left;">
-        <img src="../immagini/img1.jpg" alt="Roccia di Marna" style="max-width: 100%; height: auto; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px;">
-    </div>
-
-    <p class="western" style="margin-bottom: 15px;">
-        <strong>L'ipotesi etimologica celtica:</strong> Scientificamente, il prefisso Malna- deriva con molta probabilità da marna (la roccia argillosa ampiamente presente in zona), mentre il suffisso -ate indica il termine celtico contrada. L'unione definisce il significato di Contrada della Marna.
-    </p>
-
-    <p class="western" style="margin-bottom: 15px;">
-        📜 <strong>Le prime attestazioni scritte:</strong> Il toponimo è storicamente documentato a partire dall'XI secolo, comparendo prima come Melnate e, dal 1089, nella forma definitiva di Malnate. Nella mappa vaticana del 1581 appare storpiato in Malindo.
-    </p>
 
     <!-- Macro-sezione 3 -->
-    <h2 class="western" style="font-size: 1.5rem; color: #ffffff; margin-top: 25px; margin-bottom: 15px;">
+    <h2 class="western" style="font-size: 17px; color: #ffffff; margin-top: 25px; margin-bottom: 15px;">
         Dalla Preistoria all'Epoca Romana
     </h2>
     <p class="western" style="margin-bottom: 15px;">
@@ -115,7 +151,7 @@
 
 
     <!-- Macro-sezione 4 -->
-    <h2 class="western" style="font-size: 1.5rem; color: #ffffff; margin-top: 25px; margin-bottom: 15px;">
+    <h2 class="western" style="font-size: 17px; color: #ffffff; margin-top: 25px; margin-bottom: 15px;">
         Il Medioevo e il Feudalesimo
     </h2>
 
@@ -137,7 +173,7 @@
 
 
     <!-- Macro-sezione 5 -->
-    <h2 class="western" style="font-size: 1.5rem; color: #ffffff; margin-top: 25px; margin-bottom: 15px;">
+    <h2 class="western" style="font-size: 17px; color: #ffffff; margin-top: 25px; margin-bottom: 15px;">
         Dal Ducato di Milano al Risorgimento
     </h2>
 
@@ -158,7 +194,7 @@
     </p>
 
 
-    <h2 class="western" style="font-size: 1.5rem; color: #ffffff; margin-top: 25px; margin-bottom: 15px;">
+    <h2 class="western" style="font-size: 17px; color: #ffffff; margin-top: 25px; margin-bottom: 15px;">
         Epoca Moderna e Contemporanea
     </h2>
 
