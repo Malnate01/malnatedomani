@@ -20,18 +20,23 @@
             margin-bottom: 18px;
         }
         .lista-storia .elemento-visivo {
-            flex-shrink: 0;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            font-size: 1.2rem;
-            margin-top: 2px;
-        }
-        .lista-storia img {
-            width: 24px;
-            height: auto;
-        }
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    font-size: 1.2rem;
+    /* Rimuovi margin-top precedente e usa questo per allineare alla prima riga */
+    margin-top: 4px; 
+}
+
+/* Forza tutte le immagini segnaposto ad allinearsi come gli emoji */
+.lista-storia .elemento-visivo img {
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+}
+
         .testo-paragrafo {
             margin: 0;
             flex: 1;
