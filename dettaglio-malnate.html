@@ -31,8 +31,84 @@
             <a href="conosci-malnate.html" class="pulsante-ritorno">← Torna a Conosci Malnate</a>
         </div>
 
+	<!-- ==========================================================
+             SEZIONE 1: STORIA E ARCHEOLOGIA (id: storia-archeologia)
+             ========================================================== -->
+        <section id="sezione-storia" class="blocco-argomento-dinamico">
+            <header class="mappa-header">
+                <h1>Storia e Archeologia</h1>
+                <p>Un viaggio nel tempo alla scoperta delle radici e delle testimonianze storiche di Malnate.</p>
+            </header>
+            
+            <div class="grafo-connessioni">
+                <!-- BOX 1 -->
+                <div class="nodo-politico" data-target="storia-origini">
+                    <div class="nodo-icona">🏛️</div><h3>Origini e Storia</h3><div class="nodo-dettaglio">Dai Celti all'industria</div>
+                </div>
+                <!-- OVERLAY BOX 1 -->
+         <!-- 1. Origini e Storia (Sotto-sezione di Storia e Archeologia) -->
+    <div id="storia-origini" class="sovrapposizione-overlay">
+        <div class="overlay-finestra">
+            <div class="overlay-corpo">
+                <div class="overlay-barra-superiore">
+                    <h2>Dalle Origini all'Industrializzazione</h2>
+                    <button class="pulsante-chiudi-overlay" aria-label="Chiudi">&times;</button>
+                </div>
+                <div class="box-media">
+                    
+                    <!-- L'iframe ora punta alla sottopagine HTML della storia invece che al PDF -->
+                    <iframe src="malnate-storia.html" style="width: 100%; height: 550px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
+                        Il tuo browser non supporta la visualizzazione di pagine integrate.
+                    </iframe>
+
+                    <!-- Link di cortesia aggiornato per aprire la pagina in un'altra scheda -->
+                    <p class="focus-text" style="text-align: center; margin-top: 25px;">
+                        <a href="malnate-storia.html" target="_blank" class="link-pdf-esterno">
+                            Puoi anche aprire il documento a tutto schermo (click qui)
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <!-- BOX 2 -->
+                <div class="nodo-politico" data-target="storia-monumenti">
+                    <div class="nodo-icona">🏰</div><h3>Monumenti e Ville</h3><div class="nodo-dettaglio">Chiese e dimore storiche</div>
+                </div>
+
+                <!-- OVERLAY BOX 2 -->
+                <div id="storia-monumenti" class="sovrapposizione-overlay">
+		<div class="overlay-finestra">
+		<div class="overlay-corpo">
+		<div class="overlay-barra-superiore"><h2>Monumenti, Chiese e Ville Storiche</				h2><button class="pulsante-chiudi-overlay">&times;</button>
+		</div>
+		<div class="box-media">
+			<p class="focus-text">Le testimonianze architettoniche cittadine: la chiesa 			di San Martino, San Matteo, lo storico Ponte di Ferro ferroviario e le 				antiche dimore signorili con i loro parchi.</p>
+		</div>
+		</div>
+		</div>
+		</div>
+
+                <!-- BOX 3 -->
+                <div class="nodo-politico" data-target="storia-archeologia">
+                    <div class="nodo-icona">🏭</div><h3>Archeologia Industriale</h3><div class="nodo-dettaglio">I grandi opifici dismessi</div>
+                </div>
+                <!-- OVERLAY BOX 3 -->
+                <div id="storia-archeologia" class="sovrapposizione-overlay"><div class="overlay-finestra"><div class="overlay-corpo"><div class="overlay-barra-superiore"><h2>Archeologia Industriale ed ex Opifici</h2><button class="pulsante-chiudi-overlay">&times;</button></div><div class="box-media"><p class="focus-text">Memoria storica del boom economico tessile e meccanico malnatese. Focus e immagini sui grandi complexes industriali storici come l'ex Siome e i cotonifici di fondovalle.</p></div></div></div></div>
+
+                <!-- BOX 4 -->
+                <div class="nodo-politico" data-target="storia-cave">
+                    <div class="nodo-icona">⛏️</div><h3>Le Cave di Molera</h3><div class="nodo-dettaglio">Antica estrazione mineraria</div>
+                </div>
+                <!-- OVERLAY BOX 4 -->
+                <div id="storia-cave" class="sovrapposizione-overlay"><div class="overlay-finestra"><div class="overlay-corpo"><div class="overlay-barra-superiore"><h2>Le Cave di Molera</h2><button class="pulsante-chiudi-overlay">&times;</button></div><div class="box-media"><video controls width="100%"><source src="immagini/CAVE MOLERA.mp4" type="video/mp4"></video><p class="focus-text">Geositi protetti di immenso valore storico e fascino. Testimonianza dell'antica e faticosa attività di estrazione della pietra da mola che ha reso celebre il sottosuolo di Malnate.</p></div></div></div></div>
+            </div>
+        </section>
+
         <!-- ==========================================================
-             SEZIONE 1: NATURA E SENTIERI (id: natura-sentieri)
+             SEZIONE 4: NATURA E SENTIERI (id: natura-sentieri)
              ========================================================== -->
         <section id="sezione-natura" class="blocco-argomento-dinamico">
             <header class="mappa-header">
@@ -88,70 +164,7 @@
             </div>
         </section>
 
-        <!-- ==========================================================
-             SEZIONE 2: STORIA E ARCHEOLOGIA (id: storia-archeologia)
-             ========================================================== -->
-        <section id="sezione-storia" class="blocco-argomento-dinamico">
-            <header class="mappa-header">
-                <h1>Storia e Archeologia</h1>
-                <p>Un viaggio nel tempo alla scoperta delle radici e delle testimonianze storiche di Malnate.</p>
-            </header>
-            
-            <div class="grafo-connessioni">
-                <!-- BOX 1 -->
-                <div class="nodo-politico" data-target="storia-origini">
-                    <div class="nodo-icona">🏛️</div><h3>Origini e Storia</h3><div class="nodo-dettaglio">Dai Celti all'industria</div>
-                </div>
-                <!-- OVERLAY BOX 1 -->
-         <!-- 1. Origini e Storia (Sotto-sezione di Storia e Archeologia) -->
-    <div id="storia-origini" class="sovrapposizione-overlay">
-        <div class="overlay-finestra">
-            <div class="overlay-corpo">
-                <div class="overlay-barra-superiore">
-                    <h2>Dalle Origini all'Industrializzazione</h2>
-                    <button class="pulsante-chiudi-overlay" aria-label="Chiudi">&times;</button>
-                </div>
-                <div class="box-media">
-                    
-                    <!-- L'iframe ora punta alla sottopagine HTML della storia invece che al PDF -->
-                    <iframe src="malnate-storia.html" style="width: 100%; height: 550px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;">
-                        Il tuo browser non supporta la visualizzazione di pagine integrate.
-                    </iframe>
-
-                    <!-- Link di cortesia aggiornato per aprire la pagina in un'altra scheda -->
-                    <p class="focus-text" style="text-align: center; margin-top: 25px;">
-                        <a href="malnate-storia.html" target="_blank" class="link-pdf-esterno">
-                            Puoi anche aprire il documento a tutto schermo (click qui)
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-                <!-- BOX 2 -->
-                <div class="nodo-politico" data-target="storia-monumenti">
-                    <div class="nodo-icona">🏰</div><h3>Monumenti e Ville</h3><div class="nodo-dettaglio">Chiese e dimore storiche</div>
-                </div>
-                <!-- OVERLAY BOX 2 -->
-                <div id="storia-monumenti" class="sovrapposizione-overlay"><div class="overlay-finestra"><div class="overlay-corpo"><div class="overlay-barra-superiore"><h2>Monumenti, Chiese e Ville Storiche</h2><button class="pulsante-chiudi-overlay">&times;</button></div><div class="box-media"><p class="focus-text">Le testimonianze architettoniche cittadine: la chiesa di San Martino, San Matteo, lo storico Ponte di Ferro ferroviario e le antiche dimore signorili con i loro parchi.</p></div></div></div></div>
-
-                <!-- BOX 3 -->
-                <div class="nodo-politico" data-target="storia-archeologia">
-                    <div class="nodo-icona">🏭</div><h3>Archeologia Industriale</h3><div class="nodo-dettaglio">I grandi opifici dismessi</div>
-                </div>
-                <!-- OVERLAY BOX 3 -->
-                <div id="storia-archeologia" class="sovrapposizione-overlay"><div class="overlay-finestra"><div class="overlay-corpo"><div class="overlay-barra-superiore"><h2>Archeologia Industriale ed ex Opifici</h2><button class="pulsante-chiudi-overlay">&times;</button></div><div class="box-media"><p class="focus-text">Memoria storica del boom economico tessile e meccanico malnatese. Focus e immagini sui grandi complexes industriali storici come l'ex Siome e i cotonifici di fondovalle.</p></div></div></div></div>
-
-                <!-- BOX 4 -->
-                <div class="nodo-politico" data-target="storia-cave">
-                    <div class="nodo-icona">⛏️</div><h3>Le Cave di Molera</h3><div class="nodo-dettaglio">Antica estrazione mineraria</div>
-                </div>
-                <!-- OVERLAY BOX 4 -->
-                <div id="storia-cave" class="sovrapposizione-overlay"><div class="overlay-finestra"><div class="overlay-corpo"><div class="overlay-barra-superiore"><h2>Le Cave di Molera</h2><button class="pulsante-chiudi-overlay">&times;</button></div><div class="box-media"><video controls width="100%"><source src="immagini/CAVE MOLERA.mp4" type="video/mp4"></video><p class="focus-text">Geositi protetti di immenso valore storico e fascino. Testimonianza dell'antica e faticosa attività di estrazione della pietra da mola che ha reso celebre il sottosuolo di Malnate.</p></div></div></div></div>
-            </div>
-        </section>
+        
 
         <!-- ==========================================================
              SEZIONE 3: SAPORI E CULTURA (id: sapori-cultura)
