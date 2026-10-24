@@ -48,15 +48,14 @@
 }
 
 .mio-iframe-interno {
-    width: 100%;    /* Su smartphone prende tutta la larghezza disponibile */
-    height: 450px;  /* Regola l'altezza in pixel in base al tuo contenuto */
-    border: none;   /* Rimuove il bordo standard dell'iframe (opzionale) */
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Forza l'iframe a mantenere le proporzioni corrette del video */
+    height: auto;         /* L'altezza si adatta da sola senza occupare spazio inutile */
 }
 
-/* Stile per computer e tablet (schermi più grandi di 768px) */
 @media (min-width: 768px) {
     .mio-iframe-interno {
-        width: 50%; /* Su PC torna a essere il 50% e rimane centrato */
+        width: 50%;       /* Torna al 50% su PC, ma mantiene le proporzioni correttte */
     }
 }
 
