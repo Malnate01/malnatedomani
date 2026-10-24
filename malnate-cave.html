@@ -78,10 +78,15 @@
 <!-- *************************** nuove ! ********************* -->
 		
 
-		<!-- Contenitore per centrare e distanziare l'iframe dal testo -->
+		<!-- Contenitore per centrare e distanziare  -->
+<!-- Contenitore nativo per il video: massima compatibilità desktop e mobile -->
 <div class="video-wrapper">
-    <iframe src="immagini/cave-molera.mp4" class="mio-iframe-interno"></iframe>
+    <video class="mio-iframe-interno" controls preload="metadata" playsinline>
+        <source src="immagini/cave-molera.mp4" type="video/mp4">
+        Il tuo browser non supporta la riproduzione di questo video.
+    </video>
 </div>
+
 		<div>
 			<p style="text-align: center; margin-top: 25px; color: green;">
                         <a href="immagini/cave-molera.mp4" target="_blank" class="link-pdf-esterno">
