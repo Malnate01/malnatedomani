@@ -40,27 +40,34 @@
         }
 
        
-/* Stile base per smartphone (Mobile First) */
-.iframe-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0; /* Distanzia l'iframe dal testo sopra e sotto */
-}
-
-.mio-iframe-interno {
+/* Il contenitore si fa carico delle proporzioni (in questo caso circa 4:3 o un 1:1 ammorbidito) */
+.video-wrapper {
+    position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1; /* Forza l'iframe a essere perfettamente quadrato come il video */
-    height: auto;        /* Calcola l'altezza in automatico in base alla larghezza */
-    display: block;
-    margin: 0 auto;
+    padding-bottom: 75%; /* Proporzione 4:3. Se il video è un quadrato perfetto, usa 100% */
+    height: 0;
+    margin: 20px auto;
+    overflow: hidden;
 }
 
+/* L'iframe si adatta al millimetro al suo contenitore, eliminando gli spazi neri vuoti */
+.mio-iframe-interno {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Su PC limitiamo la larghezza del contenitore al 50% per non farlo diventare gigantesco */
 @media (min-width: 768px) {
-    .mio-iframe-interno {
-        width: 50%;      /* Torna al 50% su computer rimanendo sempre quadrato */
+    .video-wrapper {
+        width: 50%;
+        padding-bottom: 37.5%; /* Metà del padding perché la larghezza è dimezzata (se usi 100% sopra, metti 50% qui) */
     }
 }
-    
+
 	</style>
 </head>
 <body style="font-size: 15px; background-color: rgba(0,0,0,0.65) !important; color: #ffffff !important; margin: 0; padding: 15px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6;">
@@ -72,7 +79,7 @@
 		
 
 		<!-- Contenitore per centrare e distanziare l'iframe dal testo -->
-<div class="iframe-container">
+<div class="video-wrapper">
     <iframe src="immagini/cave molera.mp4"" class="mio-iframe-interno"></iframe>
 </div>
 		<div>
