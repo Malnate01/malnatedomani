@@ -39,16 +39,29 @@
             
         }
 
-        /* Ottimizzazione per schermi piccoli all'interno dell'iframe */
-     /*  @media (max-width: 600px) {
-            body {
-                padding: 10px;
-                font-size: 14px;
-            }
-            h1 { font-size: 1.4rem; }
-            h2 { font-size: 1.15rem; }
-        }*/
-    </style>
+       
+/* Stile base per smartphone (Mobile First) */
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Distanzia l'iframe dal testo sopra e sotto */
+}
+
+.mio-iframe-interno {
+    width: 100%;    /* Su smartphone prende tutta la larghezza disponibile */
+    height: 450px;  /* Regola l'altezza in pixel in base al tuo contenuto */
+    border: none;   /* Rimuove il bordo standard dell'iframe (opzionale) */
+}
+
+/* Stile per computer e tablet (schermi più grandi di 768px) */
+@media (min-width: 768px) {
+    .mio-iframe-interno {
+        width: 50%; /* Su PC torna a essere il 50% e rimane centrato */
+    }
+}
+
+    
+	</style>
 </head>
 <body style="font-size: 15px; background-color: rgba(0,0,0,0.65) !important; color: #ffffff !important; margin: 0; padding: 15px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6;">
 
@@ -56,11 +69,13 @@
     <p>Istituito ufficialmente nel 2015, il Monumento Naturale "Sistema naturalistico delle cave di Molera di Malnate e Cagno" è un'area protetta inserita nel territorio del Parco Locale di Interesse Sovracomunale (PLIS) della Valle del Lanza. La riserva nasce con l'obiettivo di conservare gli storici affioramenti di pietra arenaria e l'importante ecosistema che si è sviluppato al loro interno dopo l'abbandono delle attività estrattive.</p>
 
 <!-- *************************** nuove ! ********************* -->
-		<div>
+		
 
-		<iframe src="immagini/cave molera.mp4" style="width: 100%; max-width: 500px; display: block; margin: 0 auto; height: 400px;">
-                        Il tuo browser non supporta la visualizzazione di pagine integrate.
-                </iframe>
+		<!-- Contenitore per centrare e distanziare l'iframe dal testo -->
+<div class="iframe-container">
+    <iframe src="immagini/cave molera.mp4"" class="mio-iframe-interno"></iframe>
+</div>
+		<div>
 			<p style="text-align: center; margin-top: 25px; color: green;">
                         <a href="immagini/cave molera.mp4" target="_blank" class="link-pdf-esterno">
                             <!--Puoi anche aprire il documento a tutto schermo (click qui)-->
