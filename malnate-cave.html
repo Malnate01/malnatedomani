@@ -49,16 +49,17 @@
 
 .mio-iframe-interno {
     width: 100%;
-    aspect-ratio: 16 / 9; /* Forza l'iframe a mantenere le proporzioni corrette del video */
-    height: auto;         /* L'altezza si adatta da sola senza occupare spazio inutile */
+    aspect-ratio: 1 / 1; /* Forza l'iframe a essere perfettamente quadrato come il video */
+    height: auto;        /* Calcola l'altezza in automatico in base alla larghezza */
+    display: block;
+    margin: 0 auto;
 }
 
 @media (min-width: 768px) {
     .mio-iframe-interno {
-        width: 50%;       /* Torna al 50% su PC, ma mantiene le proporzioni correttte */
+        width: 50%;      /* Torna al 50% su computer rimanendo sempre quadrato */
     }
 }
-
     
 	</style>
 </head>
