@@ -1,15 +1,19 @@
 /**
- * MALNATE.DOMANI 4 - AMMINISTRAZIONE.JS (Motore di Dettaglio Unico)
+ * MALNATE.DOMANI 5 - DETTAGLIO-COMUNE.JS (Allineato a Dettaglio-Malnate)
  */
 document.addEventListener("DOMContentLoaded", () => {
     
-    // ==========================================
-    // 1. RICONOSCIMENTO E ACCENSIONE DEL BOX CLICCATO
-    // ==========================================
+    // -----------------------------------------------------------------
+    // 1. GESTIONE DELLA SOTTO-PAGINA INIZIALE (Parametri URL)
+    // -----------------------------------------------------------------
     const parametriUrl = new URLSearchParams(window.location.search);
     const idSelezionato = parametriUrl.get('id');
 
-    // Mappa per associare i numeri ID ai rispettivi blocchi HTML della pagina
+    // Nasconde tutti i macro blocchi civici prima di caricare quello corretto
+    const tutteLeSezioni = document.querySelectorAll(".blocco-argomento-dinamico");
+    tutteLeSezioni.forEach(sez => sez.style.display = "none");
+
+    // Mostra il macro blocco richiesto nell'URL
     if (idSelezionato === '1') {
         document.getElementById('sezione-amministrazione').style.display = 'block';
     } else if (idSelezionato === '2') {
@@ -19,32 +23,61 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (idSelezionato === '4') {
         document.getElementById('sezione-partecipazione').style.display = 'block';
     } else {
-        // Se l'ID non corrisponde o manca, mostra l'amministrazione come sicurezza
+        // Backup di sicurezza se l'ID è vuoto o errato
         document.getElementById('sezione-amministrazione').style.display = 'block';
     }
 
-    // ==========================================
-    // 2. LOGICA DI SCAMBIO DELLE SCHEDE INTERNE (PER IL TRIANGOLO)
-    // ==========================================
-    const nodiPolitici = document.querySelectorAll(".nodo-politico");
-    const schedeInfo = document.querySelectorAll(".scheda-info");
+    // -----------------------------------------------------------------
+    // 2. APERTURA OVERLAY SLIDING AL CLIC SUI NODI CIVICI
+    // -----------------------------------------------------------------
+    const nodiBox = document.querySelectorAll(".nodo-politico");
 
-    if (nodiPolitici.length > 0) {
-        nodiPolitici.forEach(nodo => {
-            nodo.addEventListener("click", () => {
-                if (nodo.classList.contains("attivo")) return;
+    nodiBox.forEach(box => {
+        box.addEventListener("click", () => {
+            const targetId = box.getAttribute("data-target");
+            const overlayTarget = document.getElementById(targetId);
+            
+            if (overlayTarget) {
+                // Togli lo stato attivo dai vicini nello stesso blocco
+                const sezioneAttiva = box.closest(".blocco-argomento-dinamico");
+                sezioneAttiva.querySelectorAll(".nodo-politico").forEach(n => n.classList.remove("attivo"));
+                
+                // Accendi graficamente il nodo selezionato
+                box.classList.add("attivo");
 
-                nodiPolitici.forEach(n => n.classList.remove("attivo"));
-                nodo.classList.add("attivo");
-
-                schedeInfo.forEach(scheda => scheda.classList.remove("attiva"));
-
-                const targetId = nodo.getAttribute("data-target");
-                const schedaTarget = document.getElementById(targetId);
-                if (schedaTarget) {
-                    schedaTarget.classList.add("attiva");
-                }
-            });
+                // Fai scivolare l'overlay a tutto schermo
+                overlayTarget.classList.add("attivo");
+                document.body.style.overflow = "hidden"; // Blocca lo sfondo
+            }
         });
+    });
+
+    // -----------------------------------------------------------------
+    // 3. CHIUSURA UNIVERSALE DEI PANNELLI OVERLAY
+    // -----------------------------------------------------------------
+    function chiudiPannello(pannello) {
+        if (!pannello) return;
+        
+        pannello.classList.remove("attivo");
+        document.body.style.overflow = "auto"; // Sblocca la pagina sotto
+        nodiBox.forEach(n => n.classList.remove("attivo"));
     }
+
+    // Chiudi premendo sulla "X"
+    document.querySelectorAll(".pulsante-chiudi-overlay").forEach(pulsante => {
+        pulsante.addEventListener("click", (evento) => {
+            evento.stopPropagation();
+            const pannelloGenitore = pulsante.closest(".sovrapposizione-overlay");
+            chiudiPannello(pannelloGenitore);
+        });
+    });
+
+    // Chiudi premendo fuori dalla finestra di testo (sullo sfondo scuro)
+    document.querySelectorAll(".sovrapposizione-overlay").forEach(overlay => {
+        overlay.addEventListener("click", (evento) => {
+            if (evento.target === overlay) {
+                chiudiPannello(overlay);
+            }
+        });
+    });
 });
