@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malnate.domani - Dettaglio Civico</title>
     
-    <!-- Stili globali e menu (File base.css) -->
-    <link rel="stylesheet" href="script/base.css">
+    <!-- Foglio di stile globale del sito -->
+    <link rel="stylesheet" href="script/base.css"> 
     
-    <!-- 2. Il foglio di stile specifico per questa pagina -->
-    <link rel="stylesheet" href="dettaglio-comune.css">
+    <!-- Foglio di stile esclusivo per l'amministrazione e la vita civica -->
+    <link rel="stylesheet" href="script/dettaglio-comune.css">
 </head>
 <body>
 
@@ -19,7 +19,7 @@
         </div>
 
         <!-- ==========================================
-             SEZIONE 1: L'AMMINISTRAZIONE DI MALNATE
+             SEZIONE 1: L'AMMINISTRAZIONE (?area=amministrazione)
              ========================================== -->
         <div id="sezione-amministrazione" class="blocco-argomento-dinamico">
             <div class="mappa-header">
@@ -27,9 +27,7 @@
                 <p>Chi decide, chi propone, chi controlla. Tocca i nodi geometrici per esplorare le funzioni della macchina politica.</p>
             </div>
 
-            <!-- Griglia geometrica dei riquadri -->
             <div class="grafo-connessioni">
-                
                 <div class="nodo-politico" data-target="overlay-sindaco">
                     <div class="nodo-icona">👑</div>
                     <h3>Il Sindaco</h3>
@@ -53,12 +51,11 @@
                     <h3>Commissioni</h3>
                     <div class="nodo-dettaglio">Lavoro Preparatorio</div>
                 </div>
-
             </div>
         </div>
 
         <!-- ==========================================
-             SEZIONE 2: LO STATUTO COMUNALE
+             SEZIONE 2: LO STATUTO COMUNALE (?area=statuto)
              ========================================== -->
         <div id="sezione-statuto" class="blocco-argomento-dinamico">
             <div class="mappa-header">
@@ -67,7 +64,6 @@
             </div>
 
             <div class="grafo-connessioni">
-                
                 <div class="nodo-politico" data-target="overlay-autonomia">
                     <div class="nodo-icona">⚖</div>
                     <h3>Autonomia e Valori</h3>
@@ -91,14 +87,41 @@
                     <h3>Azione Amministrativa</h3>
                     <div class="nodo-dettaglio">Regole ed Efficacia</div>
                 </div>
+            </div>
+        </div>
 
+        <!-- ==========================================
+             SEZIONE 3: I REGOLAMENTI LOCALI (?area=regolamenti)
+             ========================================== -->
+        <div id="sezione-regolamenti" class="blocco-argomento-dinamico">
+            <div class="mappa-header">
+                <h1>I Regolamenti Locali</h1>
+                <p>Dalla Polizia Locale all'Igiene Urbana. Le norme pratiche che governano la convivenza civile quotidiana.</p>
+            </div>
+            
+            <div class="grafo-connessioni">
+                <!-- Se hai nodi specifici per i regolamenti, seguono la stessa struttura qui sopra -->
+            </div>
+        </div>
+
+        <!-- ==========================================
+             SEZIONE 4: LA PARTECIPAZIONE (?area=partecipazione)
+             ========================================== -->
+        <div id="sezione-partecipazione" class="blocco-argomento-dinamico">
+            <div class="mappa-header">
+                <h1>La Partecipazione Civica</h1>
+                <p>Gli strumenti a disposizione del cittadino per farsi sentire: Consulte, Forum e assemblee di quartiere.</p>
+            </div>
+            
+            <div class="grafo-connessioni">
+                <!-- Se hai nodi specifici per la partecipazione, seguono la stessa struttura qui sopra -->
             </div>
         </div>
 
     </div>
 
     <!-- ==========================================================
-         PANNELLI OVERLAY CON IFRAME (Nascosti di base)
+         PANNELLI OVERLAY CON IFRAME (Specifici per il Comune)
          ========================================================== -->
 
     <div id="overlay-sindaco" class="sovrapposizione-overlay">
@@ -157,8 +180,8 @@
         </div>
     </div>
 
-<!-- Script globale e script della pagina di dettaglio -->
+   <!-- Script globale e script della pagina di dettaglio -->
     <script src="script/base.js"></script>
-    <script src="dettaglio-comune.js"></script>
+    <script src="script/dettaglio-comune.js"></script>
 </body>
 </html>
