@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malnate.domani - Dettaglio Civico</title>
+    
+    <!-- Stili globali e menu (File base.css) -->
+    <link rel="stylesheet" href="script/base.css">
+    
+    <!-- 2. Il foglio di stile specifico per questa pagina -->
     <link rel="stylesheet" href="dettaglio-comune.css">
 </head>
 <body>
@@ -22,27 +27,33 @@
                 <p>Chi decide, chi propone, chi controlla. Tocca i nodi geometrici per esplorare le funzioni della macchina politica.</p>
             </div>
 
+            <!-- Griglia geometrica dei riquadri -->
             <div class="grafo-connessioni">
+                
                 <div class="nodo-politico" data-target="overlay-sindaco">
-                    <span class="nodo-icona">👑</span>
+                    <div class="nodo-icona">👑</div>
                     <h3>Il Sindaco</h3>
-                    <span class="nodo-dettaglio">Nadia Cannito</span>
+                    <div class="nodo-dettaglio">Nadia Cannito</div>
                 </div>
+
                 <div class="nodo-politico" data-target="overlay-giunta">
-                    <span class="nodo-icona">👥</span>
+                    <div class="nodo-icona">👥</div>
                     <h3>La Giunta</h3>
-                    <span class="nodo-dettaglio">Organo Esecutivo</span>
+                    <div class="nodo-dettaglio">Organo Esecutivo</div>
                 </div>
+
                 <div class="nodo-politico" data-target="overlay-consiglio">
-                    <span class="nodo-icona">🏛</span>
+                    <div class="nodo-icona">🏛</div>
                     <h3>Il Consiglio</h3>
-                    <span class="nodo-dettaglio">Indirizzo e Controllo</span>
+                    <div class="nodo-dettaglio">Indirizzo e Controllo</div>
                 </div>
+
                 <div class="nodo-politico" data-target="overlay-commissioni">
-                    <span class="nodo-icona">🛠</span>
+                    <div class="nodo-icona">🛠</div>
                     <h3>Commissioni</h3>
-                    <span class="nodo-dettaglio">Lavoro Preparatorio</span>
+                    <div class="nodo-dettaglio">Lavoro Preparatorio</div>
                 </div>
+
             </div>
         </div>
 
@@ -56,38 +67,40 @@
             </div>
 
             <div class="grafo-connessioni">
+                
                 <div class="nodo-politico" data-target="overlay-autonomia">
-                    <span class="nodo-icona">⚖</span>
+                    <div class="nodo-icona">⚖</div>
                     <h3>Autonomia e Valori</h3>
-                    <span class="nodo-dettaglio">Principi Fondamentali</span>
+                    <div class="nodo-dettaglio">Principi Fondamentali</div>
                 </div>
+
                 <div class="nodo-politico" data-target="overlay-territorio-comune">
-                    <span class="nodo-icona">🗺</span>
+                    <div class="nodo-icona">🗺</div>
                     <h3>Il Territorio</h3>
-                    <span class="nodo-dettaglio">Frazioni e Identità</span>
+                    <div class="nodo-dettaglio">Frazioni e Identità</div>
                 </div>
+
                 <div class="nodo-politico" data-target="overlay-diritti">
-                    <span class="nodo-icona">🤝</span>
+                    <div class="nodo-icona">🤝</div>
                     <h3>Diritti Civici</h3>
-                    <span class="nodo-dettaglio">Garanzie del Cittadino</span>
+                    <div class="nodo-dettaglio">Garanzie del Cittadino</div>
                 </div>
+
                 <div class="nodo-politico" data-target="overlay-azione">
-                    <span class="nodo-icona">📜</span>
+                    <div class="nodo-icona">📜</div>
                     <h3>Azione Amministrativa</h3>
-                    <span class="nodo-dettaglio">Regole ed Efficacia</span>
+                    <div class="nodo-dettaglio">Regole ed Efficacia</div>
                 </div>
+
             </div>
         </div>
-
-        <!-- Altre sezioni (Regolamenti e Partecipazione) mantengono lo stesso schema di nodi qui sopra... -->
 
     </div>
 
     <!-- ==========================================================
-         I STRUTTURALI PANNELLI OVERLAY (Usa gli iframe)
+         PANNELLI OVERLAY CON IFRAME (Nascosti di base)
          ========================================================== -->
 
-    <!-- Overlay Sindaco -->
     <div id="overlay-sindaco" class="sovrapposizione-overlay">
         <div class="overlay-finestra">
             <div class="overlay-corpo">
@@ -102,7 +115,6 @@
         </div>
     </div>
 
-    <!-- Overlay Giunta -->
     <div id="overlay-giunta" class="sovrapposizione-overlay">
         <div class="overlay-finestra">
             <div class="overlay-corpo">
@@ -117,7 +129,6 @@
         </div>
     </div>
 
-    <!-- Overlay Consiglio -->
     <div id="overlay-consiglio" class="sovrapposizione-overlay">
         <div class="overlay-finestra">
             <div class="overlay-corpo">
@@ -132,7 +143,6 @@
         </div>
     </div>
 
-    <!-- Overlay Commissioni -->
     <div id="overlay-commissioni" class="sovrapposizione-overlay">
         <div class="overlay-finestra">
             <div class="overlay-corpo">
@@ -147,8 +157,8 @@
         </div>
     </div>
 
-    <!-- Aggiungi qui sotto gli overlay mancanti (overlay-autonomia, overlay-territorio-comune, ecc.) seguendo la stessa identica struttura -->
-
+<!-- Script globale e script della pagina di dettaglio -->
+    <script src="script/base.js"></script>
     <script src="dettaglio-comune.js"></script>
 </body>
 </html>
