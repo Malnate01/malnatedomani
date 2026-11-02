@@ -13,18 +13,39 @@
 </head>
 <body>
 
+    <!-- BARRA DI NAVIGAZIONE ORIZZONTALE FISSA CON HAMBURGER -->
+    <div class="barra-menu">
+        <div class="logo">Malnate<span>.domani</span></div>
+        
+        <!-- NUOVO: Pulsante Hamburger visibile solo su schermi stretti -->
+        <button class="hamburger" id="hamburger-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="gruppo-pulsanti" id="menu-principale">
+            <li><a href="index.html" class="link-menu">Benvenuto</a></li>
+            <li><a href="conosci-malnate.html" class="link-menu">Conosci Malnate</a></li>
+            <li><a href="conosci-comune.html" class="link-menu attivo">Conosci il Comune</a></li>
+            <li><a href="trasformazioni.html" class="link-menu">Idee di Trasformazione</a></li> 
+            <li><a href="territorio.html" class="link-menu">Governare il Territorio</a></li>
+            <li><a href="criticita.html" class="link-menu">Criticità</a></li>
+        </ul>
+    </div>
+
     <div class="schermata-amministrazione">
         <div class="blocco-centrale-ritorno">
             <a href="conosci-comune.html" class="pulsante-ritorno">← Torna a Conosci il Comune</a>
         </div>
 
         <!-- ==========================================
-             SEZIONE 1: L'AMMINISTRAZIONE (?area=amministrazione)
+             SEZIONE 1: L'AMMINISTRAZIONE (?id=1)
              ========================================== -->
         <div id="sezione-amministrazione" class="blocco-argomento-dinamico">
             <div class="mappa-header">
                 <h1>L'Amministrazione di Malnate</h1>
-                <p>Chi decide, chi propone, chi controlla. Tocca i nodi geometrici per esplorare le funzioni della macchina politica.</p>
+                <p>Chi decide, chi propone, chi controlla. Tocca i nodi geometrici per esplorare las funzioni della macchina politica.</p>
             </div>
 
             <div class="grafo-connessioni">
@@ -55,7 +76,7 @@
         </div>
 
         <!-- ==========================================
-             SEZIONE 2: LO STATUTO COMUNALE (?area=statuto)
+             SEZIONE 2: LO STATUTO COMUNALE (?id=2)
              ========================================== -->
         <div id="sezione-statuto" class="blocco-argomento-dinamico">
             <div class="mappa-header">
@@ -91,39 +112,84 @@
         </div>
 
         <!-- ==========================================
-             SEZIONE 3: I REGOLAMENTI LOCALI (?area=regolamenti)
+             SEZIONE 3: I REGOLAMENTI LOCALI (?id=3)
              ========================================== -->
         <div id="sezione-regolamenti" class="blocco-argomento-dinamico">
             <div class="mappa-header">
                 <h1>I Regolamenti Locali</h1>
-                <p>Dalla Polizia Locale all'Igiene Urbana. Le norme pratiche che governano la convivenza civile quotidiana.</p>
+                <p>Le norme pratiche che governano la convivenza civile quotidiana. Tocca i nodi per consultare i regolamenti attivi.</p>
             </div>
-            
+
             <div class="grafo-connessioni">
-                <!-- Se hai nodi specifici per i regolamenti, seguono la stessa struttura qui sopra -->
+                <div class="nodo-politico" data-target="overlay-reg-polizia">
+                    <div class="nodo-icona">👮‍♂️</div>
+                    <h3>Polizia Locale</h3>
+                    <div class="nodo-dettaglio">Sicurezza e Decoro Urbano</div>
+                </div>
+
+                <div class="nodo-politico" data-target="overlay-reg-ambiente">
+                    <div class="nodo-icona">🌱</div>
+                    <h3>Ambiente e Igiene</h3>
+                    <div class="nodo-dettaglio">Gestione Rifiuti e Verde</div>
+                </div>
+
+                <div class="nodo-politico" data-target="overlay-reg-edilizia">
+                    <div class="nodo-icona">🏗</div>
+                    <h3>Edilizia e Territorio</h3>
+                    <div class="nodo-dettaglio">Regolamento Edilizio Locale</div>
+                </div>
+
+                <div class="nodo-politico" data-target="overlay-reg-commercio">
+                    <div class="nodo-icona">🛒</div>
+                    <h3>Commercio</h3>
+                    <div class="nodo-dettaglio">Attività Produttive e Mercati</div>
+                </div>
             </div>
         </div>
 
         <!-- ==========================================
-             SEZIONE 4: LA PARTECIPAZIONE (?area=partecipazione)
+             SEZIONE 4: LA PARTECIPAZIONE (?id=4)
              ========================================== -->
         <div id="sezione-partecipazione" class="blocco-argomento-dinamico">
             <div class="mappa-header">
                 <h1>La Partecipazione Civica</h1>
-                <p>Gli strumenti a disposizione del cittadino per farsi sentire: Consulte, Forum e assemblee di quartiere.</p>
+                <p>Gli strumenti a disposizione del cittadino per farsi sentire. Esplora le consulte e i forum cittadini.</p>
             </div>
-            
+
             <div class="grafo-connessioni">
-                <!-- Se hai nodi specifici per la partecipazione, seguono la stessa struttura qui sopra -->
+                <div class="nodo-politico" data-target="overlay-consulte">
+                    <div class="nodo-icona">💬</div>
+                    <h3>Le Consulte</h3>
+                    <div class="nodo-dettaglio">Organi Consultivi Tematici</div>
+                </div>
+
+                <div class="nodo-politico" data-target="overlay-forum">
+                    <div class="nodo-icona">📢</div>
+                    <h3>I Forum</h3>
+                    <div class="nodo-dettaglio">Spazi di Dibattito Aperto</div>
+                </div>
+
+                <div class="nodo-politico" data-target="overlay-quartieri">
+                    <div class="nodo-icona">🏡</div>
+                    <h3>Assemblee di Quartiere</h3>
+                    <div class="nodo-dettaglio">Incontri nelle Frazioni</div>
+                </div>
+
+                <div class="nodo-politico" data-target="overlay-istanze">
+                    <div class="nodo-icona">✍</div>
+                    <h3>Istanze e Petizioni</h3>
+                    <div class="nodo-dettaglio">Proposte Ufficiali dei Cittadini</div>
+                </div>
             </div>
         </div>
 
     </div>
 
     <!-- ==========================================================
-         PANNELLI OVERLAY CON IFRAME (Specifici per il Comune)
+         PANNELLI OVERLAY CON IFRAME
          ========================================================== -->
-
+         
+    <!-- SEZIONE 1: AMMINISTRAZIONE -->
     <div id="overlay-sindaco" class="sovrapposizione-overlay">
         <div class="overlay-finestra">
             <div class="overlay-corpo">
@@ -166,6 +232,7 @@
         </div>
     </div>
 
+    <!-- Overlay Commissioni -->
     <div id="overlay-commissioni" class="sovrapposizione-overlay">
         <div class="overlay-finestra">
             <div class="overlay-corpo">
@@ -180,8 +247,185 @@
         </div>
     </div>
 
-   <!-- Script globale e script della pagina di dettaglio -->
-    <script src="script/base.js"></script>
+    <!-- ==========================================
+         SEZIONE 2: STATUTO
+         ========================================== -->
+    <div id="overlay-autonomia" class="sovrapposizione-overlay">
+        <div class="overlay-finestra">
+            <div class="overlay-corpo">
+                <div class="overlay-barra-superiore">
+                    <h2>⚖ Autonomia e Valori</h2>
+                    <button class="pulsante-chiudi-overlay">×</button>
+                </div>
+                <div class="box-media">
+                    <iframe src="comune/autonomia.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay-territorio-comune" class="sovrapposizione-overlay">
+        <div class="overlay-finestra">
+            <div class="overlay-corpo">
+                <div class="overlay-barra-superiore">
+                    <h2>🗺 Il Territorio Comunale</h2>
+                    <button class="pulsante-chiudi-overlay">×</button>
+                </div>
+                <div class="box-media">
+                    <iframe src="comune/territorio.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay-diritti" class="sovrapposizione-overlay">
+        <div class="overlay-finestra">
+            <div class="overlay-corpo">
+                <div class="overlay-barra-superiore">
+                    <h2>🤝 Diritti Civici</h2>
+                    <button class="pulsante-chiudi-overlay">×</button>
+                </div>
+                <div class="box-media">
+                    <iframe src="comune/diritti.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay-azione" class="sovrapposizione-overlay">
+        <div class="overlay-finestra">
+            <div class="overlay-corpo">
+                <div class="overlay-barra-superiore">
+                    <h2>📜 Azione Amministrativa</h2>
+                    <button class="pulsante-chiudi-overlay">×</button>
+                </div>
+                <div class="box-media">
+                    <iframe src="comune/azione.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         SEZIONE 3: REGOLAMENTI
+         ========================================== -->
+    <div id="overlay-reg-polizia" class="sovrapposizione-overlay">
+        <div class="overlay-finestra">
+            <div class="overlay-corpo">
+                <div class="overlay-barra-superiore">
+                    <h2>👮‍♂️ Regolamento Polizia Locale</h2>
+                    <button class="pulsante-chiudi-overlay">×</button>
+                </div>
+                <div class="box-media">
+                    <iframe src="comune/reg-polizia.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay-reg-ambiente" class="sovrapposizione-overlay">
+        <div class="overlay-finestra">
+            <div class="overlay-corpo">
+                <div class="overlay-barra-superiore">
+                    <h2>🌱 Regolamento Ambiente e Igiene</h2>
+                    <button class="pulsante-chiudi-overlay">×</button>
+                </div>
+                <div class="box-media">
+                    <iframe src="comune/reg-ambiente.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay-reg-edilizia" class="sovrapposizione-overlay">
+        <div class="overlay-finestra">
+            <div class="overlay-corpo">
+                <div class="overlay-barra-superiore">
+                    <h2>🏗 Regolamento Edilizio</h2>
+                    <button class="pulsante-chiudi-overlay">×</button>
+                </div>
+                <div class="box-media">
+                    <iframe src="comune/reg-edilizia.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay-reg-commercio" class="sovrapposizione-overlay">
+        <div class="overlay-finestra">
+            <div class="overlay-corpo">
+                <div class="overlay-barra-superiore">
+                    <h2>🛒 Regolamento Attività Commerciali</h2>
+                    <button class="pulsante-chiudi-overlay">×</button>
+                </div>
+                <div class="box-media">
+                    <iframe src="comune/reg-commercio.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         SEZIONE 4: PARTECIPAZIONE
+         ========================================== -->
+    <div id="overlay-consulte" class="sovrapposizione-overlay">
+        <div class="overlay-finestra">
+            <div class="overlay-corpo">
+                <div class="overlay-barra-superiore">
+                    <h2>💬 Le Consulte Cittadine</h2>
+                    <button class="pulsante-chiudi-overlay">×</button>
+                </div>
+                <div class="box-media">
+                    <iframe src="comune/consulte.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay-forum" class="sovrapposizione-overlay">
+        <div class="overlay-finestra">
+            <div class="overlay-corpo">
+                <div class="overlay-barra-superiore">
+                    <h2>📢 I Forum Tematici</h2>
+                    <button class="pulsante-chiudi-overlay">×</button>
+                </div>
+                <div class="box-media">
+                    <iframe src="comune/forum.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay-quartieri" class="sovrapposizione-overlay">
+        <div class="overlay-finestra">
+            <div class="overlay-corpo">
+                <div class="overlay-barra-superiore">
+                    <h2>🏡 Assemblee di Quartiere</h2>
+                    <button class="pulsante-chiudi-overlay">×</button>
+                </div>
+                <div class="box-media">
+                    <iframe src="comune/quartieri.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay-istanze" class="sovrapposizione-overlay">
+        <div class="overlay-finestra">
+            <div class="overlay-corpo">
+                <div class="overlay-barra-superiore">
+                    <h2>✍ Istanze, Petizioni e Proposte</h2>
+                    <button class="pulsante-chiudi-overlay">×</button>
+                </div>
+                <div class="box-media">
+                    <iframe src="comune/istanze.html"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collegamenti finali agli script caricati da Mac -->
     <script src="script/dettaglio-comune.js"></script>
+    <script src="script/base.js"></script>
 </body>
 </html>
