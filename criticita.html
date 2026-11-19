@@ -3,40 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malnate.domani - Scelta 3</title>
-    <link rel="stylesheet" href="script/base.css?v=2">
+    <title>Conosci Malnate - Malnate.domani</title>
+    <!-- Stili globali e menu (File base.css) -->
+    <link rel="stylesheet" href="script/base.css">
+    <!-- Stile isolato per la nuova griglia a box quadrati -->
+    <link rel="stylesheet" href="script/malnate.css">
 </head>
 <body>
 
-<!-- BARRA DI NAVIGAZIONE ORIZZONTALE FISSA CON HAMBURGER -->
-    <div class="barra-menu">
+    <!-- BARRA DI NAVIGAZIONE FISSA GLOBALE -->
+    <nav class="barra-menu">
+        <!-- Logo Originale -->
         <div class="logo">Malnate<span>.domani</span></div>
         
-        <!-- NUOVO: Pulsante Hamburger visibile solo su schermi stretti -->
+        <!-- Pulsante Hamburger (attivato a 550px) -->
         <button class="hamburger" id="hamburger-trigger">
             <span></span>
             <span></span>
             <span></span>
-        </button>    
-
-
+        </button>
+        
+        <!-- Gruppo Pulsanti / Elenco Completo delle 6 Voci Ufficiali -->
         <ul class="gruppo-pulsanti" id="menu-principale">
             <li><a href="index.html" class="link-menu">Benvenuto</a></li>
-            <li><a href="conosci-malnate.html" class="link-menu">Conosci Malnate</a></li>
+            <li><a href="conosci-malnate.html" class="link-menu attivo">Conosci Malnate</a></li>
             <li><a href="conosci-comune.html" class="link-menu">Conosci il Comune</a></li>
-           <li><a href="trasformazioni.html" class="link-menu">Idee di Trasformazione</a></li> 
+            <li><a href="trasformazioni.html" class="link-menu">Idee di Trasformazione</a></li> 
             <li><a href="territorio.html" class="link-menu">Governare il Territorio</a></li>
-            <li><a href="criticita.html" class="link-menu attivo">Criticità</a></li>
+            <li><a href="criticita.html" class="link-menu">Criticità</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <div class="schermata">
-        <h1>Sezione CRITICITA'</h1>
-        <p>Spazio pronto per lo sviluppo dei prossimi contenuti del progetto.</p>
-    </div>
+    <!-- STRUTTURA DELLA SCHERMATA -->
+    <main class="schermata malnate-schermata">
+        <header class="malnate-header">
+            <h1>CRITICITA'</h1>
+            <p>Le difficoltà e le proposte per sanare le ferite della nostra città</p>
+        </header>
 
-<!-- PRIMA carichiamo la logica globale del menu Hamburger -->
+        <!-- Griglia fluida iniettata dinamicamente da malnate.js -->
+        <section id="malnate-grid" class="malnate-grid"></section>
+    </main>
+
+    <!-- Script globale per comportamento menu (File base.js) -->
     <script src="script/base.js"></script>
-
+    <!-- Script isolato per rendering della griglia macro-aree -->
+    <script src="script/malnate.js"></script>
 </body>
 </html>
